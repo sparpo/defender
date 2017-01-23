@@ -1,0 +1,7 @@
+DIA DUIT MO CHAIRDE! If you are reading this you should have already cloned the git repository to your computer. This file will tell you how to run this app.
+INSTRUCTIONS:
+-make sure repository was cloned to "C:\Users\Windows 7\documents". If you already cloned the file to somewhere else, find the file "defender" and move it "C:\Users\Windows 7\documents".
+-look up, download & install "node.js"
+-open command prompt and type "npm install -g cordova". (make sure the directory is "C:\Users\Windows 7>" NOT "C:\Users\Windows 7\documents")
+-in command prompt type "cd documents\defender\app"
+-to test app type "cordova run browser" (if this doesnt work tell me)
