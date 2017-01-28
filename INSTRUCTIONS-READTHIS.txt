@@ -1,6 +1,16 @@
-DIA DUIT MO CHAIRDE! If you are reading this you should have already cloned the git repository to your computer. This file will tell you how to run this app.
+DIA DUIT MO CHAIRDE. This file will tell you how to run this app.
 INSTRUCTIONS:
--make sure repository was cloned to "C:\Users\Windows 7\documents". If you already cloned the file to somewhere else, find the file "defender" and move it "C:\Users\Windows 7\documents".
+
+~SETTING UP GIT~
+-download and install any git client. (I recommend "GitKraken", "Source Tree". (microsoft visual code is also a git client but with less features))
+-If you are reading this then you are on github, now, go back to previous page and click "clone or download"( its a green button).
+-Copy the url given by the green button.
+-Go to your git client, there should be a new repository button, once clicked there should be a "clone" option
+-You should be prompted to give a url and a path to download the file to. 
+-I highly recommend setting the path to "C:\Users\Windows 7\documents" (this avoids confusion, if you cant do this, tell me)
+
+~RUNNING THE APP~
+-make sure repository was cloned to "C:\Users\Windows 7\documents". If you already cloned the file to somewhere else, i recommend you find the file "defender" and move it "C:\Users\Windows 7\documents".
 -look up, download & install "node.js"
 -open command prompt and type "npm install -g cordova". (make sure the directory is "C:\Users\Windows 7>" NOT "C:\Users\Windows 7\documents")
 -in command prompt type "cd documents\defender\app"
