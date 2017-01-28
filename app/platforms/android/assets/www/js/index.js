@@ -20,6 +20,12 @@ function removeProjectFromLocalStorage() {
 function getLocalStorageByKey() {
    console.log(localStorage.key(0));
 }
+document.addEventListener("backbutton", onBackKeyDown, false);
+
+function onBackKeyDown(e) {
+   e.preventDefault();
+   alert('Back Button is Pressed!');
+}
 var app = {
     // Application Constructor
     initialize: function() {
