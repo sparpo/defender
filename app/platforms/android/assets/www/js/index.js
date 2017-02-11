@@ -1,30 +1,19 @@
-document.getElementById("setLocalStorage").addEventListener("click", setLocalStorage);
+document.getElementById("send").addEventListener("click", send);
 document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage);
 document.getElementById("removeProjectFromLocalStorage").addEventListener("click", removeProjectFromLocalStorage);
 document.getElementById("getLocalStorageByKey").addEventListener("click", getLocalStorageByKey);
 
 var localStorage = window.localStorage;	
-function setLocalStorage() {
-   localStorage.setItem("Name", "John");
-   localStorage.setItem("Job", "Developer");
-   localStorage.setItem("Project", "Cordova Project");
-}
-function showLocalStorage() {
-   console.log(localStorage.getItem("Name"));
-   console.log(localStorage.getItem("Job"));
-   console.log(localStorage.getItem("Project"));
-}	
-function removeProjectFromLocalStorage() {
-   localStorage.removeItem("Project");
-}
-function getLocalStorageByKey() {
-   console.log(localStorage.key(0));
-}
-document.addEventListener("backbutton", onBackKeyDown, false);
+function send() {
+   localStorage.setItem("Message", document.getElementById('textBox').value);
+   console.log(localStorage.getItem("Message"));
+   
+    var link = "mailto:joeyecorbett@gmail.com"
+             + "?cc=questionmarkerguy@gmail.com"
+             + "&subject=" + escape("Defender")
+             + "&body=" + escape(document.getElementById('textBox').value);
 
-function onBackKeyDown(e) {
-   e.preventDefault();
-   alert('Back Button is Pressed!');
+    window.location.href = link;
 }
 var app = {
     // Application Constructor

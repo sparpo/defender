@@ -1,12 +1,19 @@
-document.getElementById("setLocalStorage").addEventListener("click", setLocalStorage);
+document.getElementById("send").addEventListener("click", send);
 document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage);
 document.getElementById("removeProjectFromLocalStorage").addEventListener("click", removeProjectFromLocalStorage);
 document.getElementById("getLocalStorageByKey").addEventListener("click", getLocalStorageByKey);
 
 var localStorage = window.localStorage;	
 function send() {
-   localStorage.setItem("Message", $("#textBox").value);
+   localStorage.setItem("Message", document.getElementById('textBox').value);
    console.log(localStorage.getItem("Message"));
+   
+    var link = "mailto:joeyecorbett@gmail.com"
+             + "?cc=questionmarkerguy@gmail.com"
+             + "&subject=" + escape("Defender")
+             + "&body=" + escape(document.getElementById('textBox').value);
+
+    window.location.href = link;
 }
 var app = {
     // Application Constructor
