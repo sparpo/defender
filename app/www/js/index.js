@@ -1,29 +1,25 @@
 document.getElementById("send").addEventListener("click", send);
-document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage);
-document.getElementById("removeProjectFromLocalStorage").addEventListener("click", removeProjectFromLocalStorage);
-document.getElementById("getLocalStorageByKey").addEventListener("click", getLocalStorageByKey);
 
 var localStorage = window.localStorage;	
 function send() {
    localStorage.setItem("Message", document.getElementById('textBox').value);
    console.log(localStorage.getItem("Message"));
-
-   var newName = 'John Smith',
-    xhr = new XMLHttpRequest();
-
-xhr.open('POST', 'http://defender.netne.net/sendmail.php');
-xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-xhr.onload = function() {
-    if (xhr.status === 200 && xhr.responseText !== newName) {
-        alert('Something went wrong.  Name is now ' + xhr.responseText);
-    }
-    else if (xhr.status !== 200) {
-        alert('Request failed.  Returned status of ' + xhr.status);
-    }
-};
-xhr.send(encodeURI('name=' + newName));
-    
+    var message = localStorage.getItem("Message");
+    var key = "dJdJekCVAFIqvUJ13DEczZjgIh_4MyeIGEHz2GBYKFe"; // << YOUR KEY HERE
+    var message_name = "defender_send_message";    // << YOUR MESSAGE NAME HERE
+    var url = "https://maker.ifttt.com/trigger/" + message_name + "/with/key/" + key;
+    $.ajax({  
+      url: url,
+      data: { value1: message },
+      data: { value2: "joeyecorbett@gmail.com"},
+      dataType: "jsonp",
+      complete: function(jqXHR, textStatus) {
+        alert("Message Sent"); 
+      } 
+    });   
 }
+
+//http://defender.netne.net/sendmail.php?p=5kxP2wba&to=defender%40ricecollege.ie&subject=5th&body=hello
 var app = {
     // Application Constructor
     initialize: function() {
