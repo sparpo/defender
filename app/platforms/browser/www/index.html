@@ -2,12 +2,15 @@
 <html>
     <head>
         
-        <meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos; data: gap: https://ssl.gstatic.com &apos;unsafe-eval&apos;; style-src &apos;self&apos; &apos;unsafe-inline&apos;; media-src *; connect-src 'self' https://maker.ifttt.com/trigger/defender_send_message; img-src &apos;self&apos; data: content:;">
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos; data: gap: https://ssl.gstatic.com &apos;unsafe-eval&apos;; style-src &apos;self&apos; &apos;unsafe-inline&apos;; media-src *; img-src &apos;self&apos; data: content:;">-->
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' maker.ifttt.com">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
 		<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+		<allow-navigation href="https://maker.ifttt.com*" />
+
 		<style>
 		/* For avoiding title truncation in wp8 */
 		.ui-header .ui-title {
@@ -20,16 +23,16 @@
 				position: relative !important;
 		}
 		</style>
-        <title>Hello World</title>
+        <title>start screen</title>
     </head>
     <body>
         <div class="app">
             <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
+                <p class="event listening">THIS IS THE START PAGE</p>
                 <p class="event received">HelloWorld</p>
             </div>
-<textarea id="textBox" name="textBox" placeholder="Would you like to tell defender anything?"></textarea>
-  			<button id="send">send</button>
+<textarea id="emailBox" name="emailBox" placeholder="The email you will send to goes here"></textarea>
+  			<button id="confirm">confirm</button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
