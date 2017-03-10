@@ -3,8 +3,9 @@
     "",
     "\\app",
     "\\app\\www",
-    "\\app\\www\\css"
+    "\\app\\www\\css",
+    "\\app\\www\\js"
   ],
-  "SelectedNode": "\\app\\www\\home.html",
+  "SelectedNode": "\\app\\www\\js\\home.js",
   "PreviewInSolutionExplorer": false
 }
