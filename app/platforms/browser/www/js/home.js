@@ -1,5 +1,5 @@
 document.getElementById("send").addEventListener("click", send);
-
+document.getElementById("reset").addEventListener("click", reset);
 var localStorage = window.localStorage;	
 function send() {
    localStorage.setItem("Message", document.getElementById('textBox').value);
@@ -10,13 +10,17 @@ function send() {
     var url = "https://maker.ifttt.com/trigger/" + message_name + "/with/key/" + key;
     $.ajax({  
       url: url,
-      data: {value1: message},
-      data: {value2: localStorage.getItem("AdminsEmail")},
+      data: {value1: message,
+             value2: localStorage.getItem("AdminsEmail")},
       dataType: "jsonp",
       complete: function(jqXHR, textStatus) {
         console.log("Message Sent");
       } 
     });   
+}
+function reset() {
+    localStorage.removeItem("AdminsEmail");
+    window.location = "index.html"
 }
 //http://defender.netne.net/sendmail.php?p=5kxP2wba&to=defender%40ricecollege.ie&subject=5th&body=hello
 var app = {
