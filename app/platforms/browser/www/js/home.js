@@ -3,6 +3,8 @@ document.getElementById("reset").addEventListener("click", reset);
 var localStorage = window.localStorage;	
 function send() {
    localStorage.setItem("Message", document.getElementById('textBox').value);
+   var img = new Image();
+   img.src = "C:\Users\Windows 7\Documents\defender\app\www\img\defender.png";
     var message = localStorage.getItem("Message");
     console.log(message + localStorage.getItem("AdminsEmail"));
     var key = "dJdJekCVAFIqvUJ13DEczZjgIh_4MyeIGEHz2GBYKFe"; // << YOUR KEY HERE
@@ -11,7 +13,8 @@ function send() {
     $.ajax({  
       url: url,
       data: {value1: message,
-             value2: localStorage.getItem("AdminsEmail")},
+             value2: localStorage.getItem("AdminsEmail"),
+             /*value3: img*/},
       dataType: "jsonp",
       complete: function(jqXHR, textStatus) {
         console.log("Message Sent");

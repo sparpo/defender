@@ -46,15 +46,23 @@ body {
 }
 #reset{
     top: 15%;
-    left: 25%;
-    height: 7%;
-    width: 50%;
+    left: 35%;
+    height: 5%;
+    width: 30%;
 
+}
+#defender{
+    content: url(../img/defender.png);
+}
+/*
+#textbox{
+    height: 30%;
+    width: 100%;
 }
 /* Portrait layout (default) */
 .app {
-background-color: rgb(150, 150, 150);
- /*background:url(../img/greybackground.jpg) no-repeat center top; /* 170px x 200px */
+background-color: rgb(100, 100, 100);
+/*background:url(../img/greybackground.jpg) no-repeat center top; /* 170px x 200px */
 background-size: contain;
 position:absolute;             /* position in the center of the screen */
 left:0%;
