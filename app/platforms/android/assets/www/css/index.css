@@ -54,12 +54,15 @@ body {
 #defender{
     content: url(../img/defender.png);
 }
+<<<<<<< HEAD
 .table{
     display: block;
     height: 100px;
      overflow-y: scroll;
     overflow-x: hidden; 
 }
+=======
+>>>>>>> 65168a0703f5fec91b35f8120fcfed85247eeb80
 /*
 #textbox{
     height: 30%;

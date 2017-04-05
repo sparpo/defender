@@ -3,8 +3,13 @@ document.getElementById("reset").addEventListener("click", reset);
 var localStorage = window.localStorage;	
 function send() {
    localStorage.setItem("Message", document.getElementById('textBox').value);
+<<<<<<< HEAD
    //var img = new Image();
    //img.src = "C:\Users\Windows 7\Documents\defender\app\www\img\defender.png";
+=======
+   var img = new Image();
+   img.src = "C:\Users\Windows 7\Documents\defender\app\www\img\defender.png";
+>>>>>>> 65168a0703f5fec91b35f8120fcfed85247eeb80
     var message = localStorage.getItem("Message");
     console.log(message + localStorage.getItem("AdminsEmail"));
     var key = "dJdJekCVAFIqvUJ13DEczZjgIh_4MyeIGEHz2GBYKFe"; // << YOUR KEY HERE
