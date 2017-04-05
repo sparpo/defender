@@ -2,15 +2,14 @@
 document.getElementById("confirm").addEventListener("click", confirm);
 
 var localStorage = window.localStorage;	
-function confirm() {
+/*function confirm() {
     localStorage.setItem("AdminsEmail", document.getElementById('emailBox').value);
     console.log(localStorage.getItem("AdminsEmail"));
-}
+}*/
 function confirm() {
     var email = document.getElementById('emailBox').value;
-    localStorage.setItem("AdminsEmail",email);
     if(email.substring(email.length-4, email.length-3) == "." || email.substring(email.length-3, email.length-2 ) == ".") {
-        
+        localStorage.setItem("AdminsEmail",email);
         console.log("valid");
         window.location = "home.html";
     } else {
@@ -21,6 +20,9 @@ function confirm() {
 var app = {
     // Application Constructor
     initialize: function() {
+        if(localStorage.getItem("AdminsEmail")) {
+            window.location = "home.html";
+        }
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
