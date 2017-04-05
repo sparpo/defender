@@ -54,6 +54,11 @@ body {
 #defender{
     content: url(../img/defender.png);
 }
+/*
+#textbox{
+    height: 30%;
+    width: 100%;
+}
 /* Portrait layout (default) */
 .app {
 background-color: rgb(100, 100, 100);
