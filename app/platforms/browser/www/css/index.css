@@ -54,6 +54,31 @@ body {
 #defender{
     content: url(../img/defender.png);
 }
+td:hover{
+    background-color:gray;
+    cursor: pointer;
+}
+.table{
+    visibility: hidden;
+    display: block;
+    height: 150px;
+    width: 90%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    border-collapse: collapse;
+    border: 1px solid #333333;
+    background-color: rgb(255, 255, 255);  
+}
+.table tr {
+    border: 1px solid #333333;
+}
+.table th {
+    background-color: rgb(200, 200, 200);
+}
+#schoolName {
+    height: 50px;
+}
+
 /*
 #textbox{
     height: 30%;

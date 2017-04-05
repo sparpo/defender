@@ -54,11 +54,18 @@ body {
 #defender{
     content: url(../img/defender.png);
 }
+#yourSchool{
+    color: rgb(255, 255, 255);
+}
+td:hover{
+    background-color:gray;
+    cursor: pointer;
+}
 .table{
     visibility: hidden;
     display: block;
-    height: 250px;
-    width: 90%;
+    height: 200px;
+    width: 100%;
     overflow-y: scroll;
     overflow-x: scroll;
     border-collapse: collapse;
@@ -67,6 +74,7 @@ body {
 }
 .table tr {
     border: 1px solid #333333;
+    height: 50px;
 }
 .table th {
     background-color: rgb(200, 200, 200);

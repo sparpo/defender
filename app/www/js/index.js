@@ -10,12 +10,18 @@ function confirm() {
     var email = document.getElementById('emailBox').value;
     if(email.substring(email.length-4, email.length-3) == "." || email.substring(email.length-3, email.length-2 ) == ".") {
         localStorage.setItem("AdminsEmail",email);
+        localStorage.setItem("School", document.getElementById("schoolName").value);
         console.log("valid");
         window.location = "home.html";
     } else {
         console.log("invalid");
     }
 }
+/*
+$("td").click(function(){
+var value =this.innerHTML;
+alert(value);
+})*/
 function search() {
     if(document.getElementById("schoolName").value.length>1){
         document.getElementById("table").style.visibility="visible";
