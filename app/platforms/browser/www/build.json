@@ -2,9 +2,9 @@
  "android": {
      "release": {
          "keystore":"c:\\defender-key.keystore",
-         "storePassword":"pwd123",
-         "alias":"johnS",
-         "password":"pwd123",
+         "storePassword":"Hydr0g3n",
+         "alias":"defender",
+         "password":"Hydr0g3n",
          "keystoreType":""
        }
    }
