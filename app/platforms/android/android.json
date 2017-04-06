@@ -19,7 +19,7 @@
     },
     "installed_plugins": {
         "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+            "PACKAGE_NAME": "io.defender.rice"
         }
     },
     "dependent_plugins": {},

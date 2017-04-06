@@ -1,0 +1,11 @@
+{
+ "android": {
+     "release": {
+         "keystore":"c:\\defender-key.keystore",
+         "storePassword":"Hydr0g3n",
+         "alias":"defender",
+         "password":"Hydr0g3n",
+         "keystoreType":""
+       }
+   }
+}
