@@ -17,6 +17,11 @@ function confirm() {
         console.log("invalid");
     }
 }
+/*
+$("td").click(function(){
+var value =this.innerHTML;
+alert(value);
+})*/
 function search() {
     if(document.getElementById("schoolName").value.length>1){
         document.getElementById("table").style.visibility="visible";

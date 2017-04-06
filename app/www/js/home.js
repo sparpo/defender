@@ -13,8 +13,7 @@ function send() {
     $.ajax({  
       url: url,
       data: {value1: message,
-             value2: localStorage.getItem("AdminsEmail"),
-             /*value3: img*/},
+             value2: localStorage.getItem("AdminsEmail")},
       dataType: "jsonp",
       complete: function(jqXHR, textStatus) {
         console.log("Message Sent");

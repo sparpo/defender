@@ -45,7 +45,7 @@ body {
     width:100%;
 }
 #reset{
-    top: 15%;
+    top: 10%;
     left: 35%;
     height: 5%;
     width: 30%;
@@ -53,6 +53,7 @@ body {
 }
 #defender{
     content: url(../img/defender.png);
+    top:20%;
 }
 #yourSchool{
     color: rgb(255, 255, 255);

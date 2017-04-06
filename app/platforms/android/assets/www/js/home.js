@@ -32,7 +32,7 @@ var app = {
         document.getElementById("yourSchool").innerHTML="Your school is " + localStorage.getItem("School");
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
-
+    
     // deviceready Event Handler
     //
     // Bind any cordova events here. Common events are:
