@@ -1,0 +1,11 @@
+{
+     "android": {
+         "release": {
+             "keystore": "c:\\defender.keystore",
+             "storePassword": "hybern",
+             "alias": "defenderks",
+             "password" : "hybern",
+             "keystoreType": ""
+         }
+     }
+ }
