@@ -5,7 +5,7 @@ function send() {
    localStorage.setItem("Message", document.getElementById('textBox').value);
    //var img = new Image();
    //img.src = "C:\Users\Windows 7\Documents\defender\app\www\img\defender.png";
-    var message = localStorage.getItem("Message");
+    /*var message = localStorage.getItem("Message");
     console.log(message + localStorage.getItem("AdminsEmail"));
     var key = "dJdJekCVAFIqvUJ13DEczZjgIh_4MyeIGEHz2GBYKFe"; // << YOUR KEY HERE
     var message_name = "defender_send_message";    // << YOUR MESSAGE NAME HERE
@@ -18,7 +18,29 @@ function send() {
       complete: function(jqXHR, textStatus) {
         console.log("Message Sent");
       } 
-    });   
+    });  
+    */ 
+    var message = localStorage.getItem("Message");
+    var key = "dJdJekCVAFIqvUJ13DEczZjgIh_4MyeIGEHz2GBYKFe";
+    var message_name = "defender_send_message";
+    var data = {};
+    data.value1 = message;
+    data.value2 = localStorage.getItem("AdminsEmail");
+    var url = "https://maker.ifttt.com/trigger/" + message_name + "/with/key/" + key;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+        if (xmlhttp.status == 200) {
+        console.log("Message Sent");
+        }
+    }
+    }
+    var script = document.createElement("script");
+    script.setAttribute("src",url);
+    document.body.appendChild(script);
+    xmlhttp.open('POST', url, true);
+    xmlhttp.responseType = 'json';
+    xmlhttp.send(new FormData(data));
 }
 function reset() {
     localStorage.removeItem("AdminsEmail");
