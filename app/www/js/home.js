@@ -17,14 +17,14 @@ function send() {
       complete: function(jqXHR, textStatus) {
         console.log("Message Sent");
       } 
-    });  
-     */
+    });  */
+    
     var message = localStorage.getItem("Message");
     var key = "dJdJekCVAFIqvUJ13DEczZjgIh_4MyeIGEHz2GBYKFe";
-    var message_name = "defender_send_message";/*
+    var message_name = "defender_send_message";
     data.value1 = message;
-    data.value2 = localStorage.getItem("AdminsEmail");*/
-	var data = 'value1=' + encodeURIComponent(message) + '&value2=' + encodeURIComponent(localStorage.getItem("AdminsEmail"));
+    data.value2 = localStorage.getItem("AdminsEmail");
+	var data = '&value1=' + encodeURIComponent(message) + '&value2=' + encodeURIComponent(localStorage.getItem("AdminsEmail"));
 	console.log(data);
     var url = "https://maker.ifttt.com/trigger/" + message_name + "/with/key/" + key;
     var xmlhttp = new XMLHttpRequest();
