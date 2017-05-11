@@ -58,6 +58,9 @@ body {
 #yourSchool{
     color: rgb(255, 255, 255);
 }
+#email{
+    visibility: hidden;
+}
 td:hover{
     background-color:gray;
     cursor: pointer;
@@ -91,8 +94,9 @@ td:hover{
 }
 /* Portrait layout (default) */
 .app {
-background-color: rgb(100, 100, 100);
-/*background:url(../img/greybackground.jpg) no-repeat center top; /* 170px x 200px */
+/*background-color: rgb(100, 100, 100);
+content: url(../img/grey.jpg);*/
+background:url(../img/grey.jpg) no-repeat;/* center top; /* 170px x 200px */
 background-size: contain;
 position:absolute;             /* position in the center of the screen */
 left:0%;

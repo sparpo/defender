@@ -24,7 +24,7 @@ function send() {
     var message_name = "defender_send_message";/*
     data.value1 = message;
     data.value2 = localStorage.getItem("AdminsEmail");*/
-	var data = 'value1=' + encodeURIComponent(message) + '&value2=' + encodeURIComponent(localStorage.getItem("AdminsEmail"));
+	var data = '&value1=' + encodeURIComponent(message) + '&value2=' + encodeURIComponent(localStorage.getItem("AdminsEmail"));
 	console.log(data);
     var url = "https://maker.ifttt.com/trigger/" + message_name + "/with/key/" + key;
     var xmlhttp = new XMLHttpRequest();

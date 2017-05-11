@@ -7,7 +7,7 @@ var localStorage = window.localStorage;
     console.log(localStorage.getItem("AdminsEmail"));
 }*/
 function confirm() {
-    var email = document.getElementById('emailBox').value;
+    var email = document.getElementById('email').innerHTML;
     if(email.substring(email.length-4, email.length-3) == "." || email.substring(email.length-3, email.length-2 ) == ".") {
         localStorage.setItem("AdminsEmail",email);
         localStorage.setItem("School", document.getElementById("schoolName").value);
@@ -23,7 +23,7 @@ var value =this.innerHTML;
 alert(value);
 })*/
 function search() {
-    if(document.getElementById("schoolName").value.length>1){
+    if(document.getElementById("schoolName").value.length>0){
         document.getElementById("table").style.visibility="visible";
     } else {
         document.getElementById("table").style.visibility="hidden";
@@ -49,12 +49,14 @@ function search() {
 }
 //http://defender.netne.net/sendmail.php?p=5kxP2wba&to=defender%40ricecollege.ie&subject=5th&body=hello
 var app = {
+    
     // Application Constructor
     initialize: function() {
         if(localStorage.getItem("AdminsEmail")) {
             window.location = "home.html";
         }
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        document.getElementById("email").setAttribute("style","visibility:hidden");
     },
 
     // deviceready Event Handler
