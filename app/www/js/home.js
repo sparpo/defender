@@ -24,11 +24,7 @@ function send() {
     var message_name = "defender_send_message";/*
     data.value1 = message;
     data.value2 = localStorage.getItem("AdminsEmail");*/
-<<<<<<< HEAD
 	var data = '&value1=' + encodeURIComponent(message) + '&value2=' + encodeURIComponent(localStorage.getItem("AdminsEmail"));
-=======
-	var data = 'value1=' + encodeURIComponent(message) + '&value2=' + encodeURIComponent(localStorage.getItem("AdminsEmail"));
->>>>>>> parent of 4b538e2... fixed itt!!!!!! now to package the new apk....
 	console.log(data);
     var url = "https://maker.ifttt.com/trigger/" + message_name + "/with/key/" + key;
     var xmlhttp = new XMLHttpRequest();
